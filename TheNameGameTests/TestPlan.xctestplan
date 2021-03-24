@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "C8775462-6302-4BC2-86D4-1CA19EEB6A54",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TheNameGame.xcodeproj",
+        "identifier" : "3962FF702608FD3B00C341B9",
+        "name" : "TheNameGameTests"
+      }
+    }
+  ],
+  "version" : 1
+}
