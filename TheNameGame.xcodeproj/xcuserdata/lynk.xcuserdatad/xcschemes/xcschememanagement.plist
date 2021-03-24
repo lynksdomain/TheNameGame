@@ -7,7 +7,25 @@
 		<key>TheNameGame.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3962FF5A2608FD3900C341B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3962FF702608FD3B00C341B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3962FF7B2608FD3C00C341B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
