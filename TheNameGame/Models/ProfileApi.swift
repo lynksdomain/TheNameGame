@@ -27,7 +27,6 @@ struct ProfileApi {
         
         request.cachePolicy = .useProtocolCachePolicy
         
-        //check cache for data and load if exists
         if let cacheResponse = session.configuration.urlCache?.cachedResponse(for: request) {
             switch decodeData(data: cacheResponse.data) {
             case let .success(profiles):
@@ -36,7 +35,6 @@ struct ProfileApi {
                 onCompletion(.failure(error))
             }
         } else {
-            //if no cache, make call to endpoint
             let dataTask = session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
                     

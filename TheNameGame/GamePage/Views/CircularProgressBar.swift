@@ -12,7 +12,6 @@ protocol CircularProgressBarDelegate: AnyObject {
     func timerEnded()
 }
 
-//Custom Circular Progress Bar
 class CircularProgressBar: UIView {
     
     private var customBackgroundColor = UIColor(red: 226/255, green: 233/255, blue: 238/255, alpha: 1)
@@ -25,7 +24,6 @@ class CircularProgressBar: UIView {
         }
     }
     
-    //Layers to create progress bar
     private var progressLayer = CAShapeLayer()
     private var backgroundMask = CAShapeLayer()
     
@@ -55,7 +53,6 @@ class CircularProgressBar: UIView {
         layer.transform = CATransform3DMakeRotation(CGFloat(90 * Double.pi / 180), 0, 0, -1)
     }
     
-    //Draw Progress
     override func draw(_ rect: CGRect) {
         let circlePath = UIBezierPath(ovalIn: rect.insetBy(dx: ringWidth / 2, dy: ringWidth / 2))
         backgroundMask.path = circlePath.cgPath

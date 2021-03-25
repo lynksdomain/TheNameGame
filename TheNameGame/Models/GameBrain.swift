@@ -25,7 +25,6 @@ class GameBrain {
     private let profileApi = ProfileApi()
     weak var delegate: GameBrainDelegate?
     
-    //current game values
     private var currentProfiles = [Profile]() {
         didSet {
             delegate?.headshotsUpdated()
@@ -63,6 +62,7 @@ class GameBrain {
     //1. Timer to allow UI to show overlay before switching
     //2.If correct, update score and show new round
     //3.If incorrect and practice mode, end game
+    
     func profileSelected(_ selectedIndex:Int) {
         _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) {[weak self] (timer) in
             guard let self = self else { return }
@@ -78,7 +78,6 @@ class GameBrain {
         }
     }
     
-    //When timer has ended, end game
     func timerEnded() {
         delegate?.gameOver(score: currentScore)
     }
@@ -107,8 +106,6 @@ class GameBrain {
         return Int.random(in: 0..<currentProfiles.count)
     }
     
-    //Creates shadow list of all profiles to randomly remove 6
-    //This is done to avoid duplication in new batch
     private func newBatchOfProfiles() -> [Profile] {
         var tempAllProfiles = allProfiles
         var newBatch = [Profile]()

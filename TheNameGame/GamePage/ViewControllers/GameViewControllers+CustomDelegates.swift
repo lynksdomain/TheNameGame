@@ -7,14 +7,12 @@
 
 import UIKit
 
-//Methods from ProgressBar
 extension GameViewController: CircularProgressBarDelegate {
     func timerEnded() {
         gameBrain.timerEnded()
     }
 }
 
-//Methods from GameBrain
 extension GameViewController: GameBrainDelegate {
     
     func startTimer() {

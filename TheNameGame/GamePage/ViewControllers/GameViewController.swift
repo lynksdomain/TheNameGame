@@ -7,7 +7,6 @@
 
 import UIKit
 
-//LifeCycle Methods and Reference Variables
 class GameViewController: UIViewController {
 
     @IBOutlet weak var collectionWidthConstraint: NSLayoutConstraint!
@@ -45,7 +44,6 @@ class GameViewController: UIViewController {
     
     //HELPER FUNCTIONS FOR SET UP
     
-    // Get data and allow to retry if unavailable
     func loadDataAndStartGame() {
         ProfileApi().getProfiles {[weak self] (result) in
             DispatchQueue.main.async {

@@ -29,7 +29,6 @@ struct CollectionLayoutGuide {
         return inset
     }
     
-    //According to the orientation, return the appropriate amount of columns
     func numberOfColumns() -> CGFloat {
         guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else { return 2.0}
         if orientation == .landscapeLeft || orientation == .landscapeRight {

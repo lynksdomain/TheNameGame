@@ -36,8 +36,6 @@ class MainMenuViewController: UIViewController {
         }
     }
     
-    //Intialize game brain according to the button selected
-    //If timed, intialize progress bar
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? GameViewController else { return }

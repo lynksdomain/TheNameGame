@@ -177,8 +177,8 @@
 				39880DA2260BA7F8000E5638 /* MainMenuPage */,
 				3936BA49260BAB1F0054DECE /* GamePage */,
 				3962FF642608FD3900C341B9 /* Main.storyboard */,
-				3962FF672608FD3B00C341B9 /* Assets.xcassets */,
 				3962FF692608FD3B00C341B9 /* LaunchScreen.storyboard */,
+				3962FF672608FD3B00C341B9 /* Assets.xcassets */,
 				3962FF6C2608FD3B00C341B9 /* Info.plist */,
 			);
 			path = TheNameGame;

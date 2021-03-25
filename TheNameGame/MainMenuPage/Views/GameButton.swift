@@ -7,7 +7,6 @@
 
 import UIKit
 
-//Subclass UIButton for rounded corners
 @IBDesignable
 class GameButton: UIButton {
     
