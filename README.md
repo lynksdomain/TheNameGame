@@ -3,19 +3,19 @@
 A matching game for learning the names of WillowTree team members.
 
 ## Installation 
-Xcode version: 12.4
-Target Deployment: 14.1
-Launch TheNameGame.xcworkspace for the application
+- Xcode version: 12.4
+- Target Deployment: 13.0
+- Launch TheNameGame.xcworkspace for the application
 
 
 ## Overview
-The app was built using MVC design pattern and storyboard/UIKit. It leverages Kingfisher for image caching and native URLCaching for data caching. Supports all devices and orientations by making use of Size Classes. Dependencies were installed using Cocoapods. Unit testing is also included.
+The app was built using MVC design pattern and storyboard/UIKit. It leverages Kingfisher for image caching and URLCaching for caching Network requests. Supports all devices and orientations by making use of Size Classes. Dependencies were installed using Cocoapods. Unit testing is also included.
 
 ## Programmatic UI vs Storyboard
-When considering which to use, ease of use and code needed were the deciding factors. Size classes are easy to implement using the Interface Builder and Storyboards. The iPad uses the same size class for both orientations. This was worked around by forcing the portrait mode of the iPad to adopt the standard portrait size classes of most iphones.
+Storyboard was chosen due to the efficiency in speed to design around. Size classes are also easy to implement using the Interface Builder and Storyboards. The iPad uses the same size class for both orientations. This was worked around by forcing the portrait mode of the iPad to adopt the standard portrait size classes of most iphones.
 
 ## Why Kingfisher?
-Another consideration came when thinking about image caching. Initially, NSCache was considered as a simple effective method of implementing the feature. [Kingfisher](https://github.com/onevcat/Kingfisher/wiki), however, is an industry accepted solution that would provide a more comprehensive system. A system that would provide a mixed caching design that saves to memory and disk, self clearing when needed, activity indicators, and more. Ultimately it was an easy decision to go with it.
+Another consideration came when thinking about image caching. Initially, NSCache was considered as a simple effective method of implementing the feature. [Kingfisher](https://github.com/onevcat/Kingfisher/wiki), however, is an industry standard solution that would provide a more comprehensive system. A system that would provide a mixed caching design that saves to memory and disk, cache eviction when needed, activity indicators, and more.
 
 ## No Splash Screen on Ipad
 Size classes come back to haunt with the launchscreen. Once again there is an issue between different orientations for iPad and I think the figma designs accounted for that since there were no splash screens attached to the iPad specs. Given the lack of control of the launchscreen and not being able to use custom classses, I ultimately decided to keep the splash screen off the iPad. Trying to implement it gave some really ugly results so I felt less was more.
@@ -31,6 +31,7 @@ These are things that given more time would be great to implement.
 - Best score saved
 - Global Leaderboard
 - Background music for main menu and game page
+- Refactoring the Network layer and delegation pattern to use the Combine framework
 
 ## Testing
 Unit testing was included to ensure the API Client and Game logic are implemented as intended. Tests include:
